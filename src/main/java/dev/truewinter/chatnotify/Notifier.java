@@ -1,7 +1,6 @@
 package dev.truewinter.chatnotify;
 
 import com.earth2me.essentials.messaging.IMessageRecipient;
-import net.ess3.api.IUser;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
