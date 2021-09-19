@@ -109,7 +109,9 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
                     }
                 }
             } else if (isCommand(args[0], label)) {
-                return getCommand(args[0], label).handleTabComplete(sender, args);
+                if (sender.hasPermission(playerCommandPerms.get(args[0]))) {
+                    return getCommand(args[0], label).handleTabComplete(sender, args);
+                }
             }
         } else if (label.equals("cnm")) {
             if (args.length < 2) {
@@ -119,7 +121,9 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
                     }
                 }
             } else if (isCommand(args[0], label)) {
-                return getCommand(args[0], label).handleTabComplete(sender, args);
+                if (sender.hasPermission(modCommandPerms.get(args[0]))) {
+                    return getCommand(args[0], label).handleTabComplete(sender, args);
+                }
             }
         }
 
