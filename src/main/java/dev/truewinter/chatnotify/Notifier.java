@@ -1,6 +1,7 @@
 package dev.truewinter.chatnotify;
 
 import com.earth2me.essentials.messaging.IMessageRecipient;
+import net.ess3.api.IUser;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -28,6 +29,10 @@ public class Notifier {
     }
 
     public void handleChatEvent(AsyncPlayerChatEvent e) {
+        if (e.getPlayer() == null) {
+            return;
+        }
+
         if (containsSubscribedWord(e.getMessage())) {
             Map<Player, Set<String>> sendToPlayers = new HashMap<>();
 
@@ -66,6 +71,10 @@ public class Notifier {
     }
 
     public void handlePlayerMessageEvent(IMessageRecipient sender, IMessageRecipient recipient, String message) {
+        if (sender.getUUID() == null || recipient.getUUID() == null) {
+            return;
+        }
+
         if (!sender.getUUID().equals(recipient.getUUID())) {
             Player player = Bukkit.getPlayer(recipient.getUUID());
             if (db.playerIsOptedIn(player.getUniqueId()) && db.playerSoundOn(player.getUniqueId())) {
