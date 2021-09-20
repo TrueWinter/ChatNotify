@@ -1,5 +1,5 @@
 name: ChatNotify
-version: 0.0.3
+version: 0.0.4
 author: TrueWinter
 main: dev.truewinter.chatnotify.ChatNotify
 api-version: 1.17

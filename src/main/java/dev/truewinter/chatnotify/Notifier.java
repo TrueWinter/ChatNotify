@@ -134,7 +134,7 @@ public class Notifier {
         boolean containsWord = false;
 
         for (Word word : words) {
-            if (message.contains(word.getWord())) {
+            if (message.toLowerCase().contains(word.getWord())) {
                 containsWord = true;
                 break;
             }
@@ -147,7 +147,7 @@ public class Notifier {
         Set<Word> subscribedWords = new HashSet<>();
 
         for (Word word : words) {
-            if (message.contains(word.getWord())) {
+            if (message.toLowerCase().contains(word.getWord())) {
                 subscribedWords.add(word);
             }
         }
