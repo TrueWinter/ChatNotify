@@ -1,0 +1,71 @@
+name: ChatNotifySpigot
+version: ${project.version}
+author: TrueWinter
+main: dev.truewinter.chatnotify.spigot.ChatNotifySpigot
+api-version: 1.18
+
+depend:
+  - Essentials
+  - EssentialsChat
+
+commands:
+  cn:
+    description: ChatNotify commands
+  cnm:
+    description: ChatNotify mod/admin commands
+
+permissions:
+  chatnotify.notify:
+    description: Players with this permission will be notified of words they are subscribed to
+    default: true
+  chatnotify.bypassapproval:
+    description: Players with this permission can subscribe to any word without requiring approval
+    default: false
+  chatnotify.mod.notify:
+    description: Players with this permission will receive mod messages from ChatNotify
+    default: op
+  chatnotify.commands.add:
+    description: Allows players to add to their subscribed words
+    default: true
+  chatnotify.commands.remove:
+    description: Allows players to remove from their subscribed words
+    default: true
+  chatnotify.commands.list:
+    description: Allows players to list their subscribed words
+    default: true
+  chatnotify.commands.on:
+    description: Allows players to opt-in to ChatNotify messages
+    default: true
+  chatnotify.commands.off:
+     description: Allows players to opt-out from ChatNotify messages
+     default: true
+  chatnotify.commands.sound:
+    description: Allows players to toggle ChatNotify sounds
+    default: true
+  chatnotify.commands.mod.add:
+    description: Allows mods to add to other players' subscribed words
+    default: op
+  chatnotify.commands.mod.remove:
+    description: Allows mods to remove other players' subscribed words
+    default: op
+  chatnotify.commands.mod.list:
+    description: Allows mods to list other players' subscribed words
+    default: op
+  chatnotify.commands.mod.allow:
+    description: Allows mods to allow flagged subscribed words
+    default: op
+  chatnotify.commands.mod.deny:
+    description: Allows mods to deny flagged subscribed words
+    default: op
+  chatnotify.commands.mod.queue:
+    description: Shows the words that still need approval
+    default: op
+  chatnotify.commands.mod.optin:
+    description: Allows mods to opt-in to ChatNotify messages
+    default: op
+  chatnotify.commands.mod.optout:
+    description: Allows mods to opt-out from ChatNotify messages
+    default: op
+  chatnotify.commands.admin.reload:
+    description: Allows admins to reload the ChatNotify config
+    default: op

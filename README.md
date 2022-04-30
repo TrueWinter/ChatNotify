@@ -17,8 +17,9 @@ require-approval: "part"
 # Any subscribed word this length or shorter will require approval
 require-approval-length: 3
 
-# Do not edit this
+# Do not edit anything below this line
 init-setup-done: false
+config-version: 1
 ```
 
 ## Commands
@@ -43,6 +44,10 @@ init-setup-done: false
 ### Admin
 
 - `/cnm reload`: Allows admins to reload config
+
+## Important Note
+
+ChatNotify will not notify any player or mod until the first time they run a ChatNotify command.
 
 ## Permissions
 
@@ -71,3 +76,7 @@ ChatNotify will **not** work without the following plugins being installed:
 
 - Essentials(X)
 - Essentials(X)Chat
+
+## Extending Support to Other Platforms
+
+ChatNotify has been written in such a way to easily allow for other platforms and chat plugins to be supported. See the `PluginAdapter.md` file for more information.
