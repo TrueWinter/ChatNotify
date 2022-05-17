@@ -68,4 +68,4 @@ You will also need to call the following methods:
 
 When building ChatNotify (`package` using Maven), JavaDocs will be generated in `common/target/site/apidocs`. Anything not documented in the JavaDocs should be considered internal and not be used.
 
-The JavaDocs of the latest stable release are also available at [https://chatnotify.truewinter.net/docs](https://chatnotify.truewinter.net/docs).
+The JavaDocs of the latest stable release are also available at [https://chatnotify.truewinter.xyz/docs](https://chatnotify.truewinter.xyz/docs).
